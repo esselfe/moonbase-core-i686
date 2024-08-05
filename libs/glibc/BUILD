@@ -118,15 +118,17 @@ prepare_install &&
 make install &&
 
 # Now optionally perform debug symbol stripping only
+# 2024-08-05 Note: this breaks the installation on i686, so disable it
+# but still show what would have been done in the output
 if [ "$STRIP" == "y" ] ; then
    for FN in ld-$MAJOR.so \
        lib{anl,BrokenLocale,c,crypt,dl,m,nsl,util,pthread,resolv}-$MAJOR.so \
        libnss_{compat,files,hesiod,nis,nisplus}-$MAJOR.so \
        lib{memusage,pcprofile,SegFault,thread_db-1.0}.so ; do
-      strip -S /lib/$FN
+      echo DISABLED strip -S /lib/$FN
    done &&
   for FN in "/usr/lib/gconv/*.so" ; do
-    strip -S $FN
+    echo DISABLED strip -S $FN
   done
 fi &&
 
