@@ -3,5 +3,6 @@ depends sed
 depends texinfo
 depends python
 depends %KERNEL_HEADERS
+depends libnsl
 
 optional_depends perl "" "" "for testing the installation"
