@@ -1,4 +1,4 @@
-          MODULE=glibc
+MODULE=glibc
          VERSION=2.32
            MAJOR=${VERSION::4}
           SOURCE=$MODULE-$VERSION.tar.xz
