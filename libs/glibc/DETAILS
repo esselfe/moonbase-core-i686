@@ -1,5 +1,5 @@
 MODULE=glibc
-         VERSION=2.32
+VERSION=2.32
            MAJOR=${VERSION::4}
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
@@ -11,7 +11,6 @@ MODULE=glibc
          UPDATED=20240805
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
 #           PSAFE=no
-
 cat << EOF
 glibc - Library for use with GNU/Hurd and GNU/Linux.
 GNU C Library is one of the most important components of the GNU Hurd and most
